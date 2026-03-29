@@ -1,0 +1,40 @@
+{
+  "package": {
+    "productName": "Clipboard Transfer Station",
+    "version": "0.1.0",
+    "description": "A lightweight server-based clipboard/file transfer station.",
+    "author": "Your Name",
+    "license": "MIT",
+    "tauri": {
+      "bundle": {
+        "icon": [
+          "icons/icon.png"
+        ],
+        "identifier": "com.yourname.clipboardtransferstation",
+        "version": "0.1.0",
+        "description": "A lightweight server-based clipboard/file transfer station."
+      },
+      "updater": {
+        "active": true
+      },
+      "tauri": {
+        "allowlist": {
+          "all": true
+        }
+      },
+      "systemTray": {
+        "iconPath": "icons/tray_icon.png",
+        "menu": [
+          {
+            "id": "quit",
+            "title": "Quit"
+          }
+        ]
+      }
+    },
+    "build": {
+      "devPath": "http://localhost:3000",
+      "distDir": "../dist"
+    }
+  }
+}
