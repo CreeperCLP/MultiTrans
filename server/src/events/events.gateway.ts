@@ -10,7 +10,7 @@ import { Server, Socket } from 'socket.io';
 @WebSocketGateway({ cors: true })
 export class EventsGateway {
   @WebSocketServer()
-  server: Server;
+  server!: Server;
 
   private connectedClients = new Map<string, string>(); // clientId -> deviceInfo
 

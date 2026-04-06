@@ -25,7 +25,7 @@ export class FileController {
   }
 
   @Get('download/:filename')
-  downloadFile(@Param('filename') filename, @Res() res) {
+  downloadFile(@Param('filename') filename: string, @Res() res: any) {
     return res.sendFile(filename, { root: './uploads' });
   }
 }
